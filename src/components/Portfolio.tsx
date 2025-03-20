@@ -6,37 +6,37 @@ const projects = [
     title: "Skin Disease Detection",
     description: "A deep learning project to detect skin diseases using CNN models.",
     tech: ["Python", "TensorFlow", "Flask"],
-    image: "/public/assets/image.png",
+    image: "/assets/image.png",
   },
   {
     title: "Vehicle Rental System",
     description: "A web app for renting vehicles online with secure payments.",
     tech: ["HTML", "CSS", "PHP","Mysql","XAMPP"],
-    image: "/public/assets/car.jpg",
+    image: "/assets/car.jpg",
   },
   {
     title: "Portfolio Website",
     description: "A fully responsive and animated personal portfolio website.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
-    image: "/public/assets/port.png",
+    image: "/assets/port.png",
   },
   {
     title: "Global Sympathy",
     description: "A modern static website for the company overview.",
     tech: ["Next.js", "Tailwind", "Stripe"],
-    image: "/public/assets/GS.png",
+    image: "/assets/GS.png",
   },
   {
     title: "Vision flow tech",
     description: "An official website build for the company.",
     tech: ["React", "Tailwindcss", "threejs"],
-    image: "/public/assets/vft.png",
+    image: "/assets/vft.png",
   },
   {
     title: "Sri Ram Industries",
     description: "An official website build for the company build with some cutting edge design.",
     tech: ["React", "Traditionalcss"],
-    image: "/public/assets/sri.png",
+    image: "/assets/sri.png",
   },
 ];
 

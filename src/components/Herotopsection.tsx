@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 export default function HeroSection() {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/public/assets/Royson_Dsouza-Resume v4.pdf";
+    link.href = "/assets/Royson_Dsouza-Resume v4.pdf";
     link.download = "Royson_Dsouza_Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div
         className="
           absolute z-[-1] inset-0 
-          bg-[url('/public/assets/iii.jpg')] 
+          bg-[url('/assets/iii.jpg')] 
           bg-cover bg-center 
           before:content-[''] before:absolute before:inset-0 
           before:bg-black before:opacity-80 
