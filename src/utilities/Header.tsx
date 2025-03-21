@@ -82,22 +82,19 @@ const Navbar = () => {
                             offset={-50}
                             onClick={() => setIsOpen(false)}
                         >
-                            <li className="py-2 text-xl cursor-pointer">{item.text}</li>
+                            <ul className="py-2 text-xl cursor-pointer">{item.text}</ul>
                         </ScrollLink>
                     ))}
 
                     {/* Social Media Icons for Mobile View */}
                     <div className="flex space-x-6 mt-6">
-                        <a href="#" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-green-600 transition-transform">
-                            <FaWhatsapp size={20} />
+                        <a href="https://github.com/RoysonDsz" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-red-500 transition-transform">
+                            <FaGithub size={20} />
                         </a>
-                        <a href="#" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-blue-600 transition-transform">
-                            <FaFacebookF size={20} />
-                        </a>
-                        <a href="#" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-gradient-to-bl hover:from-purple-500 hover:via-red-500 hover:to-yellow-500 transition-transform">
+                        <a href="https://www.instagram.com/Royson_Dsz/" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-gradient-to-bl hover:from-purple-500 hover:via-red-500 hover:to-yellow-500 transition-transform">
                             <FaInstagram size={20} />
                         </a>
-                        <a href="#" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-blue-500 transition-transform">
+                        <a href="https://www.linkedin.com/in/royson-dsouza17/" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-blue-500 transition-transform">
                             <FaLinkedinIn size={20} />
                         </a>
                     </div>

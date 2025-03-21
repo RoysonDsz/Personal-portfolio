@@ -22,7 +22,7 @@ export default function ContactForm() {
         <form 
           id="contact-form" 
           className="w-full p-4 sm:p-6" 
-          action="https://formspree.io/f/your-form-id" 
+          action="https://formspree.io/f/meoaaara" 
           method="POST"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">

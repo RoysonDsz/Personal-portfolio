@@ -1,30 +1,41 @@
-import { useEffect, useState } from "react";
-import HeroTop from './Herotopsection'
+import { useEffect, useRef, useState } from "react";
+import HeroTop from './Herotopsection';
 
 const ScrollingCharacter = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const totalFrames = 300; // You have 300 images
+  const scrollY = useRef(0);
+  const totalFrames = 300;
+  const [currentFrame, setCurrentFrame] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      scrollY.current = window.scrollY;
+      requestAnimationFrame(() => {
+        const frameIndex = Math.min(
+          Math.floor((scrollY.current / window.innerHeight) * totalFrames),
+          totalFrames - 1
+        );
+        setCurrentFrame(frameIndex);
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Calculate frame index based on scroll position
-  const frameIndex = Math.min(
-    Math.floor((scrollY / window.innerHeight) * totalFrames),
-    totalFrames - 1
-  );
+  // Preload images for smoother animation
+  useEffect(() => {
+    const preloadImages = () => {
+      for (let i = 1; i <= totalFrames; i++) {
+        const img = new Image();
+        img.src = `/images/male${String(i).padStart(4, "0")}.png`;
+      }
+    };
+    preloadImages();
+  }, []);
 
-  // Format number to match file naming convention (e.g., male0001, male0002, ..., male0300)
-  const formattedIndex = String(frameIndex + 1).padStart(4, "0"); // Converts 1 to "0001", 10 to "0010", etc.
+  // Format frame index to match file names (e.g., male0001.png)
+  const formattedIndex = String(currentFrame + 1).padStart(4, "0");
   const imagePath = `/images/male${formattedIndex}.png`;
-
-  console.log("Loading image:", imagePath); // Debugging: Check image path in console
 
   return (
     <div className="relative w-auto z-0 h-screen overflow-hidden">
@@ -34,19 +45,16 @@ const ScrollingCharacter = () => {
           src={imagePath}
           alt="Animated Character"
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
-    
-{/* Text Area Section */}
-<section
-  id="home"
->
-  <HeroTop/>
-</section>
 
+      {/* Text Area Section */}
+      <section id="home">
+        <HeroTop />
+      </section>
     </div>
   );
 };
 
 export default ScrollingCharacter;
-
