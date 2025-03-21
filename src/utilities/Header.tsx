@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaBars, FaTimes, FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaGithub } from "react-icons/fa";
+import { FaBars, FaTimes, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
