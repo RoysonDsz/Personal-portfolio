@@ -46,7 +46,7 @@ const Navbar = () => {
             </div>
 
             {/* Hamburger Menu for Mobile View - Positioned on Right Side */}
-            <div className="md:hidden flex justify-between items-center p-4">
+            <div className="md:hidden flex justify-between items-center p-2">
                 {/* Logo in Mobile View */}
                 <div className="text-2xl font-bold text-white">
                     <span className="bg-gradient-to-r from-blue-400 via-green-400 to-cyan-400 bg-clip-text text-transparent">
