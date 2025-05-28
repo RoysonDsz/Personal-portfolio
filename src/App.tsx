@@ -1,5 +1,5 @@
 // import './App.css'
-import Hero from './components/Herosection'
+import Hero from './components/Herotopsection'
 import Header from './utilities/Header'
 import Footer from './utilities/Footer'
 import Portfolio from './components/Portfolio'

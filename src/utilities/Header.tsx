@@ -15,12 +15,13 @@ const Navbar = () => {
     return (
         <nav className="fixed left-0 w-full p-2 z-20 backdrop-blur-3xl bg-black/30">
             {/* Desktop View */}
-            <div className="hidden md:flex justify-between items-center p-4">
+            <div className="hidden md:flex justify-between items-center">
                 
                 {/* Unique Logo Section */}
                 <div className="text-3xl font-bold text-white cursor-pointer">
                     <span className="bg-gradient-to-r from-blue-400 via-green-400 to-cyan-400 bg-clip-text text-transparent">
-                        Royson Dsouza
+                        <img src="/assets/log.png" alt="Logo" className="h-15 ml-10 w-auto" />
+
                     </span>
                 </div>
 
@@ -34,7 +35,7 @@ const Navbar = () => {
                                 duration={500} 
                                 offset={-50}
                             >
-                                <li className="py-1 px-5 text-[24px] rounded-md border text-white cursor-pointer transition duration-300 ease-in-out hover:shadow-xl hover:shadow-[rgba(9,184,220,0.8)] hover:rounded-full">
+                                <li className="py-1 px-4 text-[24px] rounded-md border text-white cursor-pointer transition duration-300 ease-in-out hover:shadow-xl hover:shadow-[rgba(9,184,220,0.8)] hover:rounded-full">
                                     {item.text}
                                 </li>
                             </ScrollLink>
@@ -48,7 +49,7 @@ const Navbar = () => {
                 {/* Logo in Mobile View */}
                 <div className="text-2xl font-bold text-white">
                     <span className="bg-gradient-to-r from-blue-400 via-green-400 to-cyan-400 bg-clip-text text-transparent">
-                        Royson Dsouza
+                        <img src="/assets/log.png" alt="Logo" className="h-15 ml-3 w-auto" />
                     </span>
                 </div>
 

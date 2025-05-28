@@ -30,29 +30,31 @@ export default function SkillsSection() {
   }, []);
 
   return (
-    <div id="skills-section" className="relative min-h-screen mb-20 md:rounded-tr-4xl md:rounded-br-4xl md:pl-10 py-10 px-10 md:px-20 md:max-w-[60%] bg-gray-900 text-white">
-      <div className="absolute inset-0 bg-cover bg-center opacity-20 md:rounded-tr-4xl  md:rounded-br-4xl"  />
-      <div className="absolute inset-0 md:bg-gray-900 bg-opacity-70 md:rounded-tr-4xl md:rounded-br-4xl" />
-      
-      <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <h2 className="text-4xl md:text-7xl font-bold text-blue-400">PROFESSIONAL</h2>
-        <p className="text-xl mt-2 mb-8">MY KNOWLEDGE LEVEL IN SOFTWARE</p>
-        
-        {skills.map((skill, index) => (
-          <div key={index} className="mb-4">
-            <div className="flex justify-between text-sm">
-              <span>{skill.name}</span>
-              <span>{skill.level}%</span>
-            </div>
-            <div className="w-full h-4 bg-gray-700 rounded-full overflow-hidden mt-1">
-              <motion.div
-                initial={{ width: 0 }}
-                animate={isVisible ? { width: `${skill.level}%` } : { width: 0 }}
-                transition={{ duration: 1.2, delay: index * 0.2 }}
-                className="h-full bg-gradient-to-r from-green-400 to-blue-500 rounded-full"
-              />
-            </div>
-          </div>
+  <div
+  id="skills-section"
+  className="relative min-h-screen mb-20 py-12 px-6 md:px-12 flex items-center justify-center"
+>
+  {/* Glassy Blue Border Box */}
+  <div className="w-full max-w-5xl backdrop-blur-md border border-white/30 rounded-2xl shadow-lg 
+            shadow-blue-500/30 p-8 md:p-12 text-white text-center">
+    <h2 className="text-4xl md:text-6xl font-bold font-serif text-blue-400">PROFESSIONAL</h2>
+    <p className="text-xl mt-2 mb-10">MY KNOWLEDGE LEVEL IN SOFTWARE</p>
+
+    {skills.map((skill, index) => (
+      <div key={index} className="mb-6 text-left">
+        <div className="flex justify-between text-sm mb-1">
+          <span className="text-white">{skill.name}</span>
+          <span className="text-white">{skill.level}%</span>
+        </div>
+        <div className="w-full h-5 bg-gray-800 rounded-full overflow-hidden">
+          <motion.div
+            initial={{ width: 0 }}
+            animate={isVisible ? { width: `${skill.level}%` } : { width: 0 }}
+            transition={{ duration: 1.2, delay: index * 0.2 }}
+            className="h-full bg-gradient-to-r from-green-400 to-blue-500 rounded-full"
+          />
+        </div>
+      </div>
         ))}
       </div>
     </div>
