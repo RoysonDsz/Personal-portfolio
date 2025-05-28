@@ -62,7 +62,7 @@ const projects = [
   title: "ClipIt – Ultimate Media Downloader",
   description: "A powerful full-stack web app that lets users download videos and music from YouTube, Spotify, and Instagram in one seamless UI. Powered by yt-dlp for deep media extraction.",
   tech: ["Vite", "React", "Flask", "Python", "yt-dlp"],
-  image: "https://static.wikia.nocookie.net/roblox/images/0/04/Clip_It_Old.png/revision/latest?cb=20240529172527", // Replace with your actual image path
+  image: "https://www.creativefabrica.com/wp-content/uploads/2021/07/26/Clipit-logo-simple-Vectro-Graphics-15124727-3-580x386.png", // Replace with your actual image path
   link: "https://github.com/RoysonDsz/ClipIt", // Replace with actual link or GitHub repo
 },
   {
