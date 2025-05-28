@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaBars, FaTimes, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { Link as ScrollLink } from 'react-scroll';
+import { MdEmail } from 'react-icons/md';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +9,7 @@ const Navbar = () => {
     const Nav = [
         { id: 1, text: "Home", slug: "home" },
         { id: 2, text: "About", slug: "about" },
-        { id: 3, text: "Portfolio", slug: "portfolio" },
+        { id: 3, text: "Projects", slug: "portfolio" },
         { id: 4, text: "Contact", slug: "contact" }
     ];
 
@@ -69,6 +70,10 @@ const Navbar = () => {
                 <a href="https://www.linkedin.com/in/royson-dsouza17/" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-blue-500 transition-transform">
                     <FaLinkedinIn size={20} />
                 </a>
+                <a href="mailto:roysondsouza1727@gmail.com" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-red-500 transition-transform">
+                <MdEmail size={20} />
+                </a>
+
             </div>
 
             {/* Mobile Menu Content with Social Icons */}
@@ -98,6 +103,9 @@ const Navbar = () => {
                         <a href="https://www.linkedin.com/in/royson-dsouza17/" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-blue-500 transition-transform">
                             <FaLinkedinIn size={20} />
                         </a>
+                           <a href="mailto:roysondsouza1727@gmail.com" className="p-3 bg-black text-white rounded-full shadow-lg hover:scale-110 hover:bg-red-500 transition-transform">
+                <MdEmail size={20} />
+                </a>
                     </div>
                 </div>
             )}
