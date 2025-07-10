@@ -87,6 +87,14 @@ const projects = [
     link: "https://www.visionflowtech.com/",
   },
   {
+  title: "MovieMate 🎬",
+  description: "AI-powered movie recommendation system built with Streamlit and TMDB API. Get 5 amazing movie recommendations in a click!",
+  tech: ["Python", "Streamlit", "TMDB API"],
+  image: "/assets/movie-recommender.png",  // <- Make sure to add a thumbnail in /public/assets
+  link: "https://roysondsz-movie-recommend.hf.space/#movie-mate"
+},
+
+  {
     title: "Sri Ram Industries",
     description: "An official website build for the company build with some cutting edge design.",
     tech: ["React", "Traditionalcss"],
